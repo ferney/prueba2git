@@ -1,0 +1,302 @@
+body{
+	font-family: 'Varela Round', sans-serif;
+	
+	color: white;
+}
+h1,section,#tablero,footer{
+	width: 900px;	
+}
+h1{	
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	display: block;	
+	margin-right: auto;
+	margin-left: auto;	
+	text-align: center;
+	animation: 3s bounce infinite;
+	font-size: 60px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+h2{
+	font-size: 20px;
+}
+h2,#instrucciones{
+	font-size: 18px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+section,footer{	
+	display:block;
+	margin-left: auto;
+	margin-right: auto;		
+}
+#info{	
+	width: 100%;	
+	color: white;	
+}
+span{
+	text-decoration: underline;
+}
+#movimientos *{	
+	display: inline-block;	
+}
+#reiniciar{	
+    background: #4CAF50 ; /* Green */      
+    color:white;
+}
+#movimientos{
+	background: grey;
+}
+#alerta{
+	opacity: 0;
+	background: red;
+}
+#tablero{
+	background-image: url("../image/fondo.jpg");	
+	height: 450px;
+	background-size: cover;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	margin-bottom: 15px;	
+}
+#timer{
+	position: relative;
+	float:right;	
+	margin-right: 20px;
+	color:white;
+	font-size: 30px;
+	line-height: 0.2;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#info>div,#info>button{
+	display: inline-block;
+	position: relative;
+	border-radius: 30px;
+	width: 30%;	
+	text-align: center;	
+	padding: 10px;
+}
+#movimientos p{
+	display: inline-block; 	
+}
+#lineaRanas{
+	position: relative;
+	margin-left: 15%;
+	margin-right: 15%;	
+	height: 8%;	
+	top:10%;
+	z-index: 10;	
+}
+#lineaRanas *{
+	position: absolute;
+	width: 12%;	
+}
+.card{
+	cursor: pointer;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#lineaRocas{
+	position: relative;
+	top:12%;	
+	height: 8%;	
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 0px;
+}	
+#lineaRocas *{
+	position: relative;
+	display: inline;
+	width: 13.4%;	
+	height: 100%;
+	padding: 0%;
+	margin:-2px !important;  	
+}
+#panelVictoria{
+	position: relative;	
+	opacity: 0;	
+	margin:auto;
+	border-radius: 20px;
+	top:10px;
+	font-size: 30px;
+	width: 200px;
+	text-align: center;	
+	color:white;	
+	background-image: linear-gradient(green, yellow);
+	padding: 10px;
+}
+@keyframes shake {
+  0%, 100% {   
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {  
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {   
+    transform: translateX(10px);
+  }
+}
+
+@keyframes swing {
+  20% {   
+    transform: rotate(15deg);
+  }
+  40% {   
+    transform: rotate(-10deg);
+  }
+  60% {  
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% { 
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 50%,100% {    
+    transform: translateY(0px)   translateX(0px);
+  }
+  25%{
+  	transform: translateX(60px) translateY(10px) rotate(10deg);
+  } 
+  75% {    
+    transform: translateX(-60px) translateY(10px) rotate(-10deg);
+  } 
+}
+
+#reiniciar {
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px #0F5A09;
+}
+#reiniciar:hover {
+  box-shadow: 0 0 8px #DFF906;
+  transform: scale(1.1);
+  outline: none;
+}
+
+#reiniciar:focus{
+	outline: none;
+}
+::selection {
+    background: transparent;
+}
+
+@media screen and (max-width: 1000px){	
+	section,#tablero,footer{
+		width: 600px;
+	}
+	#tablero{
+		height: 350px;
+	}
+	h1{
+		width: 400px;
+		font-size: 40px;
+	}		
+	#lineaRocas *{		
+		display: inline-block;
+		width: 13.4%;			
+		margin-left: -4px;		
+	}
+	#panelVictoria{						
+		font-size: 15px;
+		width: 200px;		
+		padding: 5px;
+	}
+	
+}
+
+@media screen and (max-width: 600px){	
+	
+	section,#tablero,footer{
+		width: 95%;
+		
+	}
+	#tablero{
+		
+	}
+	h1{
+		
+		font-size: 30px;
+	}	
+	h2{
+		font-size: 15px;
+	}	
+	#lineaRocas *{		
+		display: inline-block;
+		width: 13.4%;			
+		margin-left: 2px;		
+	}
+	#lineaRocas{
+		position: relative;
+		top:11.5%;	
+		height: 8%;	
+		margin-left: 15%;
+		margin-right: 15%;
+		padding: 0px;
+	}	
+	#instrucciones{
+		font-size: 10px;
+	}
+
+	#panelVictoria{						
+		font-size: 10px;
+		width: 100px;		
+		padding: 5px;
+	}
+	#timer{		
+		font-size: 15px;		
+	}
+	#info>div,#info>button{			
+		width: 30%;
+		height: 20px;	
+		font-size: 8px;	
+		padding: 0px;	
+	}		
+	footer{
+		font-size: 10px;
+	}
+}
+
+footer{
+	text-align: center;	
+	border-radius: 30px;
+	background: rgb(9,140,75,0.7);
+	padding: 5px;	
+	margin-bottom: 10px;
+}
+
+footer a,p{		
+	margin:2px;
+}
+
+footer a{		
+	background: linear-gradient(to bottom, #ff8282 1%,#8f0222 35%,#a90329 99%,#a90329 100%); 	border-radius: 30px;
+	text-align: center;	
+	display: inline-block;	
+	color:white;
+	text-decoration: none;
+	transition: all 1ms ease;
+	animation: 2s anuncio infinite linear;
+	
+}
+footer a:hover{		
+	background: #990C0C;
+	cursor: pointer;
+
+}
+
+@keyframes anuncio{
+	25%{
+		transform: perspective(100px) rotateX(60deg);
+	}
+	75%{
+		transform: perspective(100px) rotateX(-60deg);
+	}
+}

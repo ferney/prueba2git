@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/saposyranas.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	
+</head>
+<body>	
+	<br><br><br><br>	
+	<section>
+		<div id="instrucciones">
+			<h2>Objetivo: Llevar a cada grupo al lado contrario.</h2>
+			<h2>Reglas del juego: Sapos (rojos) , Ranas (verdes).</h2>			
+			<ul>	
+				<li>Los Sapos (rojos) solo pueden saltar hacia la derecha.</li>		
+				<li>Las Ranas (verdes) solo pueden saltar hacia la izquierda.</li>
+				<li>Solo se puede saltar sobre <span>una sola</span> rana o sapo o hacia una piedra a continuacion (siempre y cuando la piedra que se llegue esté vacia).</li>
+			</ul>		
+		</div>
+		
+		<div id="tablero">	
+			<div id="info">
+				<div id="movimientos">
+					<p>Movimientos: <p>
+					<p id="contadorMov"> 0 <p>
+				</div>
+				
+				<button id="reiniciar" onclick="restart()">	Reiniciar	</button>
+						
+				<div id="alerta">
+					<p>Imposible !</p>
+				</div>
+			</div>	
+			<div id="timer">
+				<p id="timerValue">00:00<p>
+			</div>
+			<div id=panelVictoria>
+				<p id=tituloVictoria> Victoria !</p>
+				<p id=tiempoFinal> Tiempo: 00:00</p>
+			</div>	
+			<div id="lineaRanas">
+			
+			</div>
+			<div id="lineaRocas">
+				<img id="r1" src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">
+				<img src="image/roca.png" alt="" class="rocks">	
+			</div>
+		</div>		
+	
+	</section>		
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/saposyranas.js"></script>
+	
+</body>
+</html>
